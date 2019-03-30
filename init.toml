@@ -41,8 +41,8 @@ default_position = 'top'
 default_height = 30
 
 
-#[[layers]]
-#name = 'tags'
+[[layers]]
+name = 'tags'
 
 
 [[custom_plugins]]

@@ -25,6 +25,9 @@ func! config#before() abort
     "加载符号文件
     :execute "cscope add  cscope.out"
 
+    "关闭ycm_conf询问
+    let g:ycm_confirm_extra_conf = 0
+
     "设置终端鼠标可复制
     set mouse=r
     call SpaceVim#custom#SPC('nore', [ 'f',  '/'],'Leaderf file', 'search file', 1)
