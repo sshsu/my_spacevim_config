@@ -1,7 +1,13 @@
+func! config#csupdate() abort
+   :execute "cs kill 1"
+   :execute "!cscope -Rbq -i cscope.files"
+   :execute "cs add cscope.out"
+endf
+
 func! config#before() abort
     
     "ale config
-    let g:ale_linters = {'c': ['gcc'], 'c++': ['g++']}
+    let g:ale_linters = {'c': ['gcc', 'cppcheck'], 'c++': ['g++','cppcheck']}
     "let g:ale_history_enabled = 1
 
     "碰到MakeFile文件自动将tab才能够空格改回tab
@@ -47,7 +53,7 @@ func! config#before() abort
    inoremap <C-d> <ESC>:YcmCompleter GoTo <C-R>=expand("<cword>")<CR><CR>
    nnoremap <C-f> :FlyGrep<CR>
    inoremap <C-f> :FlyGrep<CR>
-   
+   nnoremap <f4> :call config#csupdate()<CR> 
    set norelativenumber
  endf
 
