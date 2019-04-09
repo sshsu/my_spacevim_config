@@ -1,5 +1,5 @@
 func! config#csupdate() abort
-   :execute "cs kill 1"
+   :execute "cs kill 0"
    :execute "!cscope -Rbq -i cscope.files"
    :execute "cs add cscope.out"
 endf
@@ -8,13 +8,12 @@ func! config#before() abort
     
     "ale config
     let g:ale_linters = {'c': ['gcc', 'cppcheck'], 'c++': ['g++','cppcheck']}
+    let g:ale_c_parse_makefile = 1
     "let g:ale_history_enabled = 1
 
     "碰到MakeFile文件自动将tab才能够空格改回tab
     autocmd FileType makefile set noexpandtab
 
-    "设置语法检查ale
-    let g:ale_c_parse_makefile = 1
 
     "设置newovim的python路径
     let g:python3_host_prog = '/usr/bin/python3'

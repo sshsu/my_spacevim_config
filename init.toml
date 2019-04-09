@@ -22,7 +22,8 @@ bootstrap_before = "config#before"
 bootstrap_after = "config#after"
 #syncheck
 enable_neomake = false
-enable_ale = true
+enable_ale =  true 
+enable_ycm = false
 
 
 # Enable autocomplete layer
@@ -40,6 +41,9 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
+[[layers]]
+name = "lang#c"
+enable = false
 
 [[layers]]
 name = 'tags'

@@ -31,7 +31,7 @@ ctrl + g
 
 
 ### 定义跳转
-ycm经常会跳转到声明， 结合cscope可以更好的定义处,需要安装ycm 和 cscope
+ycm经常会跳转到声明， 结合cscope可以更好的定义处,需要安装ycm(不安装则只使用cscope进行搜索) 和 cscope
 ```
 ctrl + d
 ```
@@ -41,6 +41,12 @@ find project_dir -name "*.c" -o -name "*.h" > cscope.files
 cscope -Rbq -i cscope.files
 ```
 
-
-
+### cscope 符号更新
+```
+<f4>
+```
+需要在工程目录下生成cscope.files，如下指令
+```
+find dir_complete_path -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files
+```
 
