@@ -25,16 +25,10 @@ enable_neomake = false
 enable_ale =  true 
 enable_ycm = false
 
-
 # Enable autocomplete layer
- 
 [[layers]]
-name = 'deoplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "cycle"
-auto-completion-complete-with-key-sequence = "<v-m>"
-auto-completion-delay = 200000
-
+name = "autocomplete"
+enable = false
 
 [[layers]]
 name = 'shell'

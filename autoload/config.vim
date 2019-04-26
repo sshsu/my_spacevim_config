@@ -5,7 +5,11 @@ func! config#csupdate() abort
 endf
 
 func! config#before() abort
-    
+    let g:spacevim_autocomplete_method = "deoplete"
+
+    "粘贴后不将剪贴板内容覆盖
+    xnoremap p "_dP
+
     "ale config
     let g:ale_linters = {'c': ['gcc', 'cppcheck'], 'c++': ['g++','cppcheck']}
     let g:ale_c_parse_makefile = 1
@@ -36,6 +40,9 @@ func! config#before() abort
     "设置终端鼠标可复制
     set mouse=r
     call SpaceVim#custom#SPC('nore', [ 'f',  '/'],'Leaderf file', 'search file', 1)
+
+    "设置.h为c文件
+    au BufRead,BufNewFile *.h set filetype=c
  endf
 
  func! config#after() abort
@@ -47,12 +54,17 @@ func! config#before() abort
    let g:ycm_global_ycm_extra_conf='/etc/ycm/cpp/ycm_conf.py'
    let g:ycm_server_python_interptreter='/usr/lib/python3.5'
 
-   nnoremap <C-g> :YcmCompleter GoTo <C-R>=expand("<cword>")<CR><CR>
-   nnoremap <C-d> <C-g>:cscope find g  <C-R>=expand("<cword>")<CR><CR>
-   inoremap <C-d> <ESC>:YcmCompleter GoTo <C-R>=expand("<cword>")<CR><CR>
+   nnoremap <C-g> :YcmCompleter GoTo <C-R>=expand("<cword>")<CR><CR>zz
+   nnoremap <C-d> <C-g>:cscope find g  <C-R>=expand("<cword>")<CR><CR>zz
+   inoremap <C-d> <ESC>:YcmCompleter GoTo <C-R>=expand("<cword>")<CR><CR>zz
    nnoremap <C-f> :FlyGrep<CR>
    inoremap <C-f> :FlyGrep<CR>
    nnoremap <f4> :call config#csupdate()<CR> 
+
+   nnoremap J 13j
+   nnoremap K 13k
+   nnoremap H 5h
+   nnoremap L 5l
    set norelativenumber
  endf
 
