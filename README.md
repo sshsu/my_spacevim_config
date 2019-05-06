@@ -54,4 +54,4 @@ find dir_complete_path -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.file
 ```
 \ + m
 ```
-也可以使用```v```或者```crtl+v``` 选定一段文字之后使用 ```\ + m ``进行标记
+也可以使用```v```或者```crtl+v``` 选定一段文字之后使用 ``` \ + m ```进行标记
