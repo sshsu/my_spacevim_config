@@ -49,4 +49,9 @@ cscope -Rbq -i cscope.files
 ```
 find dir_complete_path -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files
 ```
-
+### 符号标记
+标记\去除标记单词
+```
+\ + m
+```
+也可以使用```v```或者```crtl+v``` 选定一段文字之后使用 ```\ + m ``进行标记
