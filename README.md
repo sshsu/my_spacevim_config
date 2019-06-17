@@ -27,9 +27,6 @@ ctrl + g
 :YcmGenerateConfig
 ```
 
-
-
-
 ### 定义跳转
 ycm经常会跳转到声明， 结合cscope可以更好的定义处,需要安装ycm(不安装则只使用cscope进行搜索) 和 cscope
 ```
@@ -55,3 +52,8 @@ find dir_complete_path -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.file
 \ + m
 ```
 也可以使用```v```或者```crtl+v``` 选定一段文字之后使用 ``` \ + m ```进行标记
+
+### 进入normal模式并保存文件内容
+```
+alt + l 
+```

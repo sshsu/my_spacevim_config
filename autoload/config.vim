@@ -60,6 +60,8 @@ func! config#before() abort
    nnoremap <C-f> :FlyGrep<CR>
    inoremap <C-f> :FlyGrep<CR>
    nnoremap <f4> :call config#csupdate()<CR> 
+   "设置alt l 为进入normal模式并保存
+   inoremap l <ESC>:w<CR>
 
    nnoremap J 13j
    nnoremap K 13k
