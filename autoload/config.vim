@@ -1,4 +1,5 @@
 func! config#csupdate() abort
+   :execute "!pwd | xargs -I args find args -name \"*.c\" -o -name \"*.cpp\" -o -name \"*.h\" >> cscope.files"
    :execute "cs kill 0"
    :execute "!cscope -Rbq -i cscope.files"
    :execute "cs add cscope.out"
@@ -65,8 +66,8 @@ func! config#before() abort
 
    nnoremap J 13j
    nnoremap K 13k
-   nnoremap H 5h
-   nnoremap L 5l
+   nnoremap H 8h
+   nnoremap L 8l
    set norelativenumber
  endf
 

@@ -39,12 +39,9 @@ cscope -Rbq -i cscope.files
 ```
 
 ### cscope 符号更新
+在工程目录下生成.c, .cpp, .h文件的符号索引，并更新索引
 ```
 <f4>
-```
-需要在工程目录下生成cscope.files，如下指令
-```
-find dir_complete_path -name "*.c" -o -name "*.h" -o -name "*.cpp" > cscope.files
 ```
 ### 符号标记
 标记\去除标记单词
