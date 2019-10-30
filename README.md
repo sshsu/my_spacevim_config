@@ -32,6 +32,12 @@ ycm经常会跳转到声明， 结合cscope可以更好的定义处,需要安装
 ```
 ctrl + d
 ```
+
+- ubuntu 16.04下cscope安装
+```
+apt-get install cscope
+```
+
 需要在工程目录下cscope的符号文件，启动vim的时候会自动加载
 ```
 find project_dir -name "*.c" -o -name "*.h" > cscope.files
